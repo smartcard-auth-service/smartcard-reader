@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package smartcard;
+
+service SmartcardService {
+    rpc SendSmartcardInfo(SmartcardInfoRequest) returns (SmartcardInfoResponse);
+}
+
+message SmartcardInfoRequest {
+    string name = 1;
+    uint64 timestamp = 2;
+}
+
+message SmartcardInfoResponse {
+    bool ok = 1;
+}
+
+message Test {
+    string test = 1;
+}
